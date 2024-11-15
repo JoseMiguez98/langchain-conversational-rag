@@ -1,12 +1,19 @@
-# Gradio App Dockerizada
-
 ## Instalación y Ejecución
 
-Para levantar el proyecto, ejecuta el siguiente comando:
+Para levantar el proyecto, asegúrate de definir las siguientes variables de entorno en tu archivo `.env`:
 
-```bash
+```
+LANGCHAIN_API_KEY=tu_valor
+OPENAI_API_KEY=tu_valor
+```
+
+
+Luego, ejecuta el siguiente comando:
+
+```
 docker-compose up --build
 ```
+
 
 ## Acceso
 
