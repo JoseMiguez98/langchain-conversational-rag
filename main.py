@@ -32,7 +32,7 @@ app.mount("/static", StaticFiles(directory=os.path.abspath("./static")), name="s
 app = gr.mount_gradio_app(app, gr_app, path="/")
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=7860)
-    print(f"Static files served from: {os.path.abspath('./static')}")
+  import uvicorn
+  uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 7860)))
+  print(f"Static files served from: {os.path.abspath('./static')}")
 
